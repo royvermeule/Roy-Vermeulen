@@ -1,0 +1,38 @@
+@import './varsMixins';
+
+.adminNav {
+    width: 10rem;
+    height: 100vh;
+    position: fixed;
+    background-color: rgb(12, 12, 19);
+    .nav {
+        @include flex(column, baseline, baseline);
+        gap: 25px;
+        margin-top: 1rem;
+    }
+    .navItem {
+        @include flex();
+    }
+    a {
+        position: relative;
+        text-decoration: none;
+        font-size: 25px;
+        color: map-get($orangeYellow, "5" );
+        width: 10rem;
+        text-align: center;
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: map-get($orangeYellow, "5" );
+            height: 1px;
+            width: 0;
+            left: 0;
+            bottom: -10px;
+            transition: 0.3s;
+        }
+        &:hover::after {
+            width: 100%;
+        }
+    }
+
+}

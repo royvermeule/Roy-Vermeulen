@@ -1,0 +1,47 @@
+@import './varsMixins';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100%;
+    width: 100%;
+    background-image: url(./img/background.jpg);
+    background-size: cover;
+}
+
+header {
+    font-family: $poppins;
+    background-color: rgb(234, 233, 233);
+}
+
+main {
+    @include flex();
+    font-family: $poppins;
+    color: black;
+    height: 100%;
+    width: 100%;
+
+}
+
+footer {
+    height: 4rem;
+}
+
+.title {
+    color: map-get($orangeYellow, "5" );
+    padding: 10px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-align: center;
+}
+
+.loginRegisterPage {
+
+    @include flex();
+}
+
+
+
+

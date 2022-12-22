@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-image: url(./img/background.jpg);
+  background-size: cover;
+}
+
+header {
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(234, 233, 233);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  height: 100%;
+  width: 100%;
+}
+
+footer {
+  height: 4rem;
+}
+
+.title {
+  color: rgb(250, 130, 80);
+  padding: 10px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  text-align: center;
+}
+
+.loginRegisterPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login, .register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  min-height: 15rem;
+  max-width: 50rem;
+  margin-bottom: 8rem;
+  gap: 8px;
+  background-color: white;
+  border-radius: 10px;
+  min-width: 24rem;
+  padding-bottom: 20px;
+}
+.login h2, .register h2 {
+  color: black;
+  background-color: white;
+}
+.login input, .register input {
+  color: black;
+  width: 20rem;
+  height: 2rem;
+  font-size: 16px;
+  border: none;
+  background-color: white;
+  border-radius: 2px;
+  border-bottom: 2px solid grey;
+  border-right: 2px solid white;
+  outline: none;
+  transition: 200ms ease;
+}
+.login input:focus, .register input:focus {
+  border-bottom-color: rgb(250, 130, 80);
+  border-right-color: rgba(210, 210, 210, 0.3);
+  height: 2.5rem;
+  border-bottom-right-radius: 5px;
+}
+.login .error, .register .error {
+  min-width: 20rem;
+  max-width: 20rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  color: rgb(115, 0, 0);
+  background-color: rgba(255, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.login .succeed, .register .succeed {
+  min-width: 20rem;
+  max-width: 20rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  color: rgb(103, 202, 103);
+  background-color: rgba(144, 238, 144, 0.2);
+  border-radius: 10px;
+}
+.login .succeed a, .register .succeed a {
+  color: blue;
+  text-shadow: none;
+}
+.login .submit, .register .submit {
+  height: 2.4rem;
+  background-color: white;
+  border: 2px solid rgb(250, 130, 80);
+  border-radius: 5px;
+  transition: 200ms ease;
+}
+.login .submit:hover, .register .submit:hover {
+  border-style: groovev;
+  cursor: pointer;
+  background-color: rgb(250, 130, 80);
+  color: white;
+}
+.login .registerBtn, .register .registerBtn {
+  background-color: white;
+  text-decoration: none;
+  color: rgb(250, 130, 80);
+}
+.login .registerBtn:hover, .register .registerBtn:hover {
+  text-decoration: underline;
+}
+
+.register h2 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.adminNav {
+  width: 10rem;
+  height: 100vh;
+  position: fixed;
+  background-color: rgb(12, 12, 19);
+}
+.adminNav .nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: baseline;
+  gap: 25px;
+  margin-top: 1rem;
+}
+.adminNav .navItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.adminNav a {
+  position: relative;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(250, 130, 80);
+  width: 10rem;
+  text-align: center;
+}
+.adminNav a::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(250, 130, 80);
+  height: 1px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+.adminNav a:hover::after {
+  width: 100%;
+}
+
+.infoTable {
+  border-collapse: collapse;
+  margin: 2rem;
+  background-color: white;
+}
+.infoTable thead {
+  background-color: rgb(250, 130, 80);
+  padding-top: 2rem;
+}
+.infoTable th {
+  padding: 1rem;
+  font-size: 24px;
+  border-bottom: 2px solid grey;
+}
+.infoTable td {
+  padding: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 3rem;
+  font-size: 20px;
+}
+.infoTable tbody tr:nth-child(odd) {
+  background-color: rgb(222, 222, 222);
+}
+.infoTable .update {
+  text-decoration: none;
+  color: rgb(0, 165, 0);
+  padding-right: 10px;
+  min-height: 30px;
+  border-right: 1px solid black;
+  border-radius: 2px;
+}
+.infoTable .update:hover {
+  text-decoration: underline;
+}
+.infoTable .delete {
+  text-decoration: none;
+  color: red;
+  min-height: 30px;
+  border-radius: 2px;
+}
+.infoTable .delete:hover {
+  text-decoration: underline;
+}
+
+.updateCreate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95rem;
+  padding: 2rem;
+  margin-left: 10rem;
+  margin-top: 5rem;
+  border-radius: 10px;
+  background-color: white;
+}
+.updateCreate h2 {
+  margin-right: auto;
+  margin-top: 10px;
+}
+.updateCreate input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-top: 1rem;
+  border: none;
+  width: 30rem;
+  height: 1.5rem;
+  border-radius: 2px;
+  border-bottom: 2px solid grey;
+  border-right: 2px solid white;
+  outline: none;
+  transition: 200ms ease;
+}
+.updateCreate input:focus {
+  border-bottom-color: rgb(250, 130, 80);
+  border-right-color: rgba(210, 210, 210, 0.3);
+  height: 2.5rem;
+  border-bottom-right-radius: 5px;
+}
+.updateCreate .submit {
+  background-color: white;
+  border: none;
+  border: 2px solid rgb(250, 130, 80);
+  width: 30rem;
+  height: 3rem;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.updateCreate .submit:hover {
+  border-color: rgb(250, 130, 80);
+  border-style: groovev;
+  cursor: pointer;
+  background-color: rgb(250, 130, 80);
+  color: white;
+}
+.updateCreate .userDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+  align-items: center;
+  max-width: 100rem;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-bottom: 1px solid rgba(210, 210, 210, 0.5);
+  padding-bottom: 2rem;
+}
+.updateCreate .loginDetails {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+  align-items: baseline;
+  max-width: 100rem;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.updateCreate select {
+  font-size: 18px;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 15rem;
+  border-bottom: 2px solid grey;
+  height: 1.5rem;
+}
+.updateCreate select:focus {
+  outline: none;
+}/*# sourceMappingURL=style.css.map */
